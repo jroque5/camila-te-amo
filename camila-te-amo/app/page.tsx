@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import "./Inicio.css"
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useRouter } from "next/navigation";
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
   const text = "Hola mi Cachetona, te tengo una propuesta... ❤️   ¿Quisieras ser mi San Valentín este año? 🥰";
   const words = text.split(" ");
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -31,7 +31,7 @@ const App = () => {
   const imageDuration = 1;
   const buttonsDelay = textDuration + imageDuration + 0.5; 
 
-  const child = {
+  const child: Variants = {
     hidden: { 
       opacity: 0, 
       y: 20 
