@@ -1,0 +1,19 @@
+{
+  "name": "camilita",
+  "version": "1.0.0",
+  "description": "Para mi amor",
+  "main": "App.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jroque5/CamilaTeAmo.git"
+  },
+  "author": "Juan Diego",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jroque5/CamilaTeAmo/issues"
+  },
+  "homepage": "https://github.com/jroque5/CamilaTeAmo#readme"
+}
