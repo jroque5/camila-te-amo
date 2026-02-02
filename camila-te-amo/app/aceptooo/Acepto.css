@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Pacifico&display=swap");
+
+.yay-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffebcd; /* Fondo color crema */
+  padding: 20px;
+  overflow-y: auto; /* Permitir scroll si la carta es larga */
+}
+
+.envelope {
+  width: 300px;
+  height: 200px;
+  background: #ff4d4d;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Triángulo del sobre (efecto visual) */
+.envelope::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 100px solid #ff6666; /* Un rojo un poco más claro */
+  border-radius: 10px;
+}
+
+.envelope-heart {
+  font-size: 4rem;
+  z-index: 20;
+  margin-top: 20px;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+}
+
+.envelope-text {
+  color: white;
+  font-family: "Borel", cursive;
+  font-weight: bold;
+  margin-top: 10px;
+  z-index: 20;
+}
+
+/* --- ESTILOS DE LA CARTA (PAPEL) --- */
+.letter-paper {
+  background: white;
+  width: 100%;
+  max-width: 600px; /* Ancho máximo de la carta */
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  position: relative;
+  background-image: linear-gradient(#f1f1f1 1px, transparent 1px);
+  background-size: 100% 1.5rem; /* Efecto de renglones de cuaderno opcional */
+}
+
+.letter-title {
+  font-family: 'Pacifico', cursive;
+  color: #ff4d4d;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.letter-body {
+  font-family: "Borel", cursive;
+  font-size: 1.1rem;
+  line-height: 1.8; /* Espacio para que se lea bien */
+  color: #444;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+}
+
+/* --- GALERÍA DE FOTOS (POLAROID STYLE) --- */
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.photo-frame {
+  background: white;
+  padding: 10px 10px 25px 10px; /* Padding extra abajo para efecto Polaroid */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.photo-frame:hover {
+  transform: scale(1.1) !important; /* Se agranda al pasar el mouse */
+  z-index: 10;
+}
+
+.photo-frame img {
+  border-radius: 2px;
+  width: 150px; /* Tamaño de las fotos */
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Rotaciones aleatorias para que parezcan tiradas en la mesa */
+.rotate-left { transform: rotate(-5deg); }
+.rotate-right { transform: rotate(5deg); }
